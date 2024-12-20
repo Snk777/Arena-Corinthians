@@ -64,6 +64,13 @@ h1, h2, h3, h4, h5, h6 {
 .Vue-Toastification__progress-bar {
     background-color: #a68851 !important;
 }
+.contribution__cta:focus, 
+.contribution__cta:active {
+    outline: 2px solid #bf8a49; /* Cor do contorno */
+    box-shadow: 0 0 10px rgba(191, 138, 73, 0.6); /* Sombra suave */
+    transition: outline 0.2s ease, box-shadow 0.2s ease; /* Suavidade na transição */
+}
+
 
 @media only screen and (min-width: 600px) {
     .Vue-Toastification__container.top-left {
@@ -73,6 +80,12 @@ h1, h2, h3, h4, h5, h6 {
     .feedback {
         font-size: 14px;
         padding: 8px 16px;
+    }
+
+    .contribution__cta:focus,
+    .contribution__cta:active {
+        outline: 2px solid #bf8a49;
+        box-shadow: 0 0 5px rgba(191, 138, 73, 0.6);
     }
 }
 
