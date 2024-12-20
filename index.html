@@ -208,6 +208,12 @@
 
             document.body.removeChild(tempInput);
 
+            // Adicionar foco manualmente no botão
+            const button = document.querySelector('.contribution__cta');
+            if (button) {
+                button.focus();
+            }
+
             // Exibir notificação de sucesso
             const feedback = document.createElement("div");
             feedback.innerText = "Código Pix copiado!";
