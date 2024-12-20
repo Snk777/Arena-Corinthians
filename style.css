@@ -69,6 +69,11 @@ h1, h2, h3, h4, h5, h6 {
     .Vue-Toastification__container.top-left {
         top: 8rem !important;
     }
+
+    .feedback {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
 }
 
 .swiper-slide {
