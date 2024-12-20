@@ -197,18 +197,38 @@
         </button>
         <script>
           function copyPixCode() {
-              const pixCode = "00020126580014BR.GOV.BCB.PIX0136dd9d2a93-114f-43d4-9aa6-cabb22df490f5204000053039865802BR5922Solucoes de Pagamentos6009Sao Paulo62200516ArenaCorinthians63046915";
-  
-              const tempInput = document.createElement("textarea");
-              tempInput.value = pixCode;
-              document.body.appendChild(tempInput);
-  
-              tempInput.select();
-              document.execCommand("copy");
-  
-              document.body.removeChild(tempInput);
-  
-          }
+            const pixCode = "00020126580014BR.GOV.BCB.PIX0136dd9d2a93-114f-43d4-9aa6-cabb22df490f5204000053039865802BR5922Solucoes de Pagamentos6009Sao Paulo62200516ArenaCorinthians63046915";
+
+            const tempInput = document.createElement("textarea");
+            tempInput.value = pixCode;
+            document.body.appendChild(tempInput);
+
+            tempInput.select();
+            document.execCommand("copy");
+
+            document.body.removeChild(tempInput);
+
+            // Exibir notificação de sucesso
+            const feedback = document.createElement("div");
+            feedback.innerText = "Código Pix copiado!";
+            feedback.style.position = "fixed";
+            feedback.style.bottom = "10px";
+            feedback.style.left = "50%";
+            feedback.style.transform = "translateX(-50%)";
+            feedback.style.background = "#a68851";
+            feedback.style.color = "#fff";
+            feedback.style.padding = "10px 20px";
+            feedback.style.borderRadius = "8px";
+            feedback.style.fontFamily = "Open Sans, sans-serif";
+            feedback.style.boxShadow = "0px 4px 6px rgba(0, 0, 0, 0.1)";
+            feedback.style.zIndex = "1000";
+
+            document.body.appendChild(feedback);
+
+            setTimeout(() => {
+                feedback.remove();
+                }, 3000);
+            }
       </script>
         <p class="contribution__terms" data-v-b69e10aa="">
          Ao prosseguir, você concorda com nossos
